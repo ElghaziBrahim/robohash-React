@@ -1,9 +1,15 @@
-const Search = () => {
+import { useState } from "react"
+const Search = ({ handleSearchApp }) => {
+    const handleSearchSearch = (e) => {
+        handleSearchApp(e.target.value)
+    }
+
     return (
         <>
             <div className="search">
-                <h1>find a user</h1>
-                <input type="text" name="" id="" />
+                <h4>find a user : </h4>
+                <input type="text" onChange={handleSearchSearch} />
+
             </div>
 
         </>
